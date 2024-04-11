@@ -57,7 +57,7 @@ Commands for training and testing the model on Dataset SH:
 
 ```bash
 # SH
-python -u main_informer.py --model informer --data ETTh1  --freq d
+python -u run.py --model SDTP --data  price_SH --freq d
 
 ```
 
