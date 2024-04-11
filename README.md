@@ -57,13 +57,13 @@ Commands for training and testing the model on Dataset SH:
 
 ```bash
 # SH
-python -u run.py --model SDTP --data  price_SH --freq d
+python -u run.py --model SDTP --data  price_SH.csv --freq d
 
 ```
 
 More parameter information please refer to `run.py`.
 
-We provide a more detailed and complete command description for training and testing the model:
+We provide a more detailed and complete command description for training and testing the model(recommond):
 
 ```python
 python -u SDTP.py --model <model> --data <data>
