@@ -1,5 +1,7 @@
 import numpy as np
 
+def R2(pred, true):
+    return 1 - (np.sum((true-pred)**2)) / (np.sum((true-true.mean())**2))
 
 def RSE(pred, true):
     return np.sqrt(np.sum((true - pred) ** 2)) / np.sqrt(np.sum((true - true.mean()) ** 2))
@@ -25,6 +27,7 @@ def RMSE(pred, true):
 
 def MAPE(pred, true):
     return np.mean(np.abs((pred - true) / true))
+    # return np.mean(np.abs((true - pred) / pred))
 
 
 def MSPE(pred, true):
@@ -37,5 +40,5 @@ def metric(pred, true):
     rmse = RMSE(pred, true)
     mape = MAPE(pred, true)
     mspe = MSPE(pred, true)
-
-    return mae, mse, rmse, mape, mspe
+    r2 = R2(pred, true)
+    return mae, mse, rmse, mape, mspe, r2

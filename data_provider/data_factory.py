@@ -7,6 +7,7 @@ data_dict = {
     'ETTm1': Dataset_ETT_minute,
     'ETTm2': Dataset_ETT_minute,
     'custom': Dataset_Custom,
+    # 'price':
 }
 
 
@@ -16,7 +17,7 @@ def data_provider(args, flag):
 
     if flag == 'test':
         shuffle_flag = False
-        drop_last = True
+        drop_last = False
         batch_size = args.batch_size
         freq = args.freq
     elif flag == 'pred':
